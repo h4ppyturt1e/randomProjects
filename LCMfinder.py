@@ -1,13 +1,18 @@
 with open('prime_numbers.txt') as f:
     prime_list = [int(line.split(', ')[1]) for line in f.readlines()]
+
 numbers = input('Enter list of numbers, eg. 3,19,4,9')
 numbers = numbers.split(',')
 numbers = [int(number) for number in numbers]
+
 print('Input:\n{}\n'.format(numbers))
+
 if not any(x > prime_list[-1] for x in numbers):
     loprime_factors = []
+
     for number in numbers:
         prime_factors = []
+
         for prime in prime_list:
             while number != 1:
                 if number % prime == 0:
@@ -24,6 +29,7 @@ if not any(x > prime_list[-1] for x in numbers):
     loprimes = []
     for prime_factors in loprime_factors:
         num_dict = {}
+        
         for prime in prime_factors:
             if prime not in num_dict:
                 num_dict[prime] = 1
