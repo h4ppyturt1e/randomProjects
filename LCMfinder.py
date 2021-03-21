@@ -37,11 +37,8 @@ if not any(x > prime_list[-1] for x in numbers):
     lowest_primes = {prime: 0 for prime in loprimes}
     for prime_dict in lodicts:
         for prime in loprimes:
-            if prime in prime_dict:
-                if lowest_primes[prime] == 0:
-                    lowest_primes[prime] = prime_dict[prime]
-                elif lowest_primes[prime] < prime_dict[prime]:
-                    lowest_primes[prime] = prime_dict[prime]
+            if prime in prime_dict and lowest_primes[prime] <= 0:
+                lowest_primes[prime] = prime_dict[prime]
     print('Lowest prime factorization:\n{}\n'.format(lowest_primes))
 
     total = 1
