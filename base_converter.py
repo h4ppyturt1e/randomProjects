@@ -36,11 +36,9 @@ def convert_to_base_n():
                 digit = str(lodigits[i])
                 num_in_base_n += digit
             print("Your number in base", base_n, "is", num_in_base_n)
-            # prompt = input("Click Enter to keep going. Type 'stop' to stop the program.")
-            # if prompt.lower() == 'stop':
-            #     keep_going = False
+
             print('\n')
-    except:
+    except ValueError:
         print("Invalid response, try again.")
         print("\n")
         convert_to_base_n()
@@ -55,7 +53,7 @@ def num_to_dec(num: str, cur_base: int) -> int:
     2623
     '''
     num_length = len(num)
-    sum = 0
+    total = 0
     power = 0
     for i in range(num_length - 1, -1, -1):
         letter = num[i]
@@ -64,9 +62,9 @@ def num_to_dec(num: str, cur_base: int) -> int:
         else:
             digit = letter_to_num[num[i]]
         value = digit * cur_base ** power
-        sum += value
+        total += value
         power += 1
-    return sum
+    return total
 
 
 def manual_convert_to_base_n(num: str, cur_base: int, base_n: int):
@@ -94,4 +92,4 @@ def manual_convert_to_base_n(num: str, cur_base: int, base_n: int):
     return num_in_base_n
 
 
-# convert_to_base_n()
+convert_to_base_n()
