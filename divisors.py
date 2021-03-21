@@ -1,6 +1,7 @@
 from typing import Tuple
 from itertools import combinations
 """
+Shoppee Code League Programming question - Divisors
 4 2
 1 3 2 4
 N engineers arranged in tables
@@ -12,6 +13,8 @@ dividers between groups
 noise(l,r) is noise value of workers l to r
 
 Ai is singular worker noise
+
+Prints out minimum noise level possible
 """
 
 first = [int(x) for x in input().split()]
