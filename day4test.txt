@@ -1,0 +1,6 @@
+eyr:2030 ecl:grn iyr:1963
+byr:1964
+pid:123456789
+hcl:z hgt:111
+
+x
