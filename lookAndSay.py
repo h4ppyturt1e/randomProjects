@@ -35,3 +35,4 @@ def lookAndSay(n) -> None:
         curSequence = write(curSequence)
 
 
+lookAndSay(10)
