@@ -20,10 +20,19 @@ def passwords():
 
 
 def complicated_wires():
+    # led,red,blue,star -> instruction
+    # 1001,b
+    with open("complicated_wires_cheatsheet.csv") as f:
+        data = f.readlines()
+    print(data)
+    prompt = input()
 
-    prompt = input().split()
-    led, colors, star = prompt[0], prompt[1], prompt[2]
+
+def main():
+    complicated_wires()
+    # while True:
+    #     passwords()
 
 
-while True:
-    passwords()
+if __name__ == "__main__":
+    main()

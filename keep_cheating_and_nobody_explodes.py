@@ -20,10 +20,49 @@ def passwords():
 
 
 def complicated_wires():
+    # led,red,blue,star -> instruction
+    # 1001,b
+    wire_dict = {'1001': 'b', '1100': 'b', '1101': 'b', '0000': 'c', '0001': 'c',
+                 '0101': 'c', '0011': 'd', '1000': 'd', '1111': 'd', '0111': 'p',
+                 '1010': 'p', '1011': 'p', '0010': 's', '0100': 's', '0110': 's',
+                 '1110': 's'}
 
-    prompt = input().split()
-    led, colors, star = prompt[0], prompt[1], prompt[2]
+    prompt = input("Enter configuration here\n")
+    config_list = ['0', '0', '0', '0']
+
+    if "led" in prompt:
+        config_list[0] = '1'
+    if "red" in prompt:
+        config_list[1] = '1'
+    if "blue" in prompt:
+        config_list[2] = '1'
+    if "star" in prompt:
+        config_list[3] = '1'
+    config = "".join(config_list)
+
+    result = wire_dict[config]
+    print(result)
+    return result
 
 
-while True:
-    passwords()
+def main():
+    vowels = ['a', 'e', 'i', 'o', 'u']
+
+    serial_num = input("Serial number? ").split()
+    has_vowels = any([letter.lower() in vowels for letter in serial_num])
+    is_odd = bool(int(serial_num[-1]) % 2)
+    num_batteries = int(input("Number of batteries? "))
+    parallel_port = True if input("Has parallel port? ").lower() in ["yes", "y"] else False
+    print()
+
+
+
+    complicated_wires()
+    # while True:
+    #     passwords()
+
+
+if __name__ == "__main__":
+    main()
+
+
