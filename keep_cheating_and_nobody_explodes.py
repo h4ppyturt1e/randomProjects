@@ -1,4 +1,3 @@
-
 def passwords():
     words = ['about', 'after', 'again', 'below', 'could', 'every', 'first', 'found', 'great', 'house', 'large', 'learn',
              'never', 'other', 'place', 'plant', 'point', 'right', 'small', 'sound', 'spell', 'still', 'study', 'their',
@@ -11,15 +10,17 @@ def passwords():
     possible_words_first, possible_words_third, possible_words_fifth = [], [], []
     [[possible_words_first.append(word) for word in words if word[0] == letter] for letter in first_letters]
     print(possible_words_first)
-    [[possible_words_third.append(word) for word in possible_words_first if word[2] == letter] for letter in third_letters]
+    [[possible_words_third.append(word) for word in possible_words_first if word[2] == letter] for letter in
+     third_letters]
     if len(possible_words_third) >= 2:
-        [[possible_words_fifth.append(word) for word in possible_words_third if word[4] == letter] for letter in fifth_letters]
+        [[possible_words_fifth.append(word) for word in possible_words_third if word[4] == letter] for letter in
+         fifth_letters]
         print("Answer:\n{}".format(possible_words_fifth))
     else:
         print("Answer:\n{}".format(possible_words_third))
 
 
-def complicated_wires():
+def complicated_wires(is_odd, has_parallel, num_batteries):
     # led,red,blue,star -> instruction
     # 1001,b
     wire_dict = {'1001': 'b', '1100': 'b', '1101': 'b', '0000': 'c', '0001': 'c',
@@ -45,6 +46,50 @@ def complicated_wires():
     return result
 
 
+def words_game():
+    position_dict = {1: 'top left', 2: 'middle left', 3: 'bottom left',
+                     4: 'top right', 5: 'middle right', 6: 'bottom right'}
+    label_dict = {'yes': '2', 'first': '4', 'display': '6', 'okay': '4', 'says': '6',
+                  'nothing': '2', '_': '3', 'blank': '5', 'no': '6', 'led': '2', 'lead': '6',
+                  'read': '5', 'red': '5', 'reed': '3', 'leed': '3', 'hold_on': '6', 'you': '5',
+                  'you_are': '6', 'your': '5', 'youre': '5', 'ur': '1', 'there': '6', 'theyre': '3',
+                  'their': '5', 'they_are': '2', 'see': '6', 'c': '4', 'cee': '6'}
+    order_dict = {"BLANK": "WAIT, RIGHT, OKAY, MIDDLE, BLANK, PRESS, READY, NOTHING, NO, WHAT, LEFT, UHHH, YES, FIRST",
+                  "DONE": "SURE, UH HUH, NEXT, WHAT?, YOUR, UR, YOU'RE, HOLD, LIKE, YOU, U, YOU ARE, UH UH, DONE",
+                  "FIRST": "LEFT, OKAY, YES, MIDDLE, NO, RIGHT, NOTHING, UHHH, WAIT, READY, BLANK, WHAT, PRESS, FIRST",
+                  "HOLD": "YOU ARE, U, DONE, UH UH, YOU, UR, SURE, WHAT?, YOU'RE, NEXT, HOLD, UH HUH, YOUR, LIKE",
+                  "LEFT": "RIGHT, LEFT, FIRST, NO, MIDDLE, YES, BLANK, WHAT, UHHH, WAIT, PRESS, READY, OKAY, NOTHING",
+                  "LIKE": "YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE, SURE, YOU ARE, YOUR",
+                  "MIDDLE": "BLANK, READY, OKAY, WHAT, NOTHING, PRESS, NO, WAIT, LEFT, MIDDLE, RIGHT, FIRST, UHHH, YES",
+                  "NEXT": "WHAT?, UH HUH, UH UH, YOUR, HOLD, SURE, NEXT, LIKE, DONE, YOU ARE, UR, YOU'RE, U, YOU",
+                  "NO": "BLANK, UHHH, WAIT, FIRST, WHAT, READY, RIGHT, YES, NOTHING, LEFT, PRESS, OKAY, NO, MIDDLE",
+                  "NOTHING": "UHHH, RIGHT, OKAY, MIDDLE, YES, BLANK, NO, PRESS, LEFT, WHAT, WAIT, FIRST, NOTHING, READY",
+                  "OKAY": "MIDDLE, NO, FIRST, YES, UHHH, NOTHING, WAIT, OKAY, LEFT, READY, BLANK, PRESS, WHAT, RIGHT",
+                  "PRESS": "RIGHT, MIDDLE, YES, READY, PRESS, OKAY, NOTHING, UHHH, BLANK, LEFT, FIRST, WHAT, NO, WAIT",
+                  "READY": "YES, OKAY, WHAT, MIDDLE, LEFT, PRESS, RIGHT, BLANK, READY, NO, FIRST, UHHH, NOTHING, WAIT",
+                  "RIGHT": "YES, NOTHING, READY, PRESS, NO, WAIT, WHAT, RIGHT, MIDDLE, LEFT, UHHH, BLANK, OKAY, FIRST",
+                  "SURE": "YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE, U, WHAT?, NEXT, YOUR, UH UH",
+                  "U": "UH HUH, SURE, NEXT, WHAT?, YOU'RE, UR, UH UH, DONE, U, YOU, LIKE, HOLD, YOU ARE, YOUR",
+                  "UH HUH": "UH HUH, YOUR, YOU ARE, YOU, DONE, HOLD, UH UH, NEXT, SURE, LIKE, YOU'RE, UR, U, WHAT?",
+                  "UH UH": "UR, U, YOU ARE, YOU'RE, NEXT, UH UH, DONE, YOU, UH HUH, LIKE, YOUR, SURE, HOLD, WHAT?",
+                  "UHHH": "READY, NOTHING, LEFT, WHAT, OKAY, YES, RIGHT, NO, PRESS, BLANK, UHHH, MIDDLE, WAIT, FIRST",
+                  "UR": "DONE, U, UR, UH HUH, WHAT?, SURE, YOUR, HOLD, YOU'RE, LIKE, NEXT, UH UH, YOU ARE, YOU",
+                  "WAIT": "UHHH, NO, BLANK, OKAY, YES, LEFT, FIRST, PRESS, WHAT, WAIT, NOTHING, READY, RIGHT, MIDDLE",
+                  "WHAT": "UHHH, WHAT, LEFT, NOTHING, READY, BLANK, MIDDLE, NO, OKAY, FIRST, WAIT, YES, PRESS, RIGHT",
+                  "WHAT?": "YOU, HOLD, YOU'RE, YOUR, U, DONE, UH UH, LIKE, YOU ARE, UH HUH, UR, NEXT, WHAT?, SURE",
+                  "YES": "OKAY, RIGHT, UHHH, MIDDLE, FIRST, WHAT, PRESS, READY, NOTHING, YES, LEFT, BLANK, NO, WAIT",
+                  "YOU ARE": "YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU'RE, SURE, UR, YOU ARE",
+                  "YOU": "SURE, YOU ARE, YOUR, YOU'RE, NEXT, UH HUH, UR, HOLD, WHAT?, YOU, UH UH, LIKE, DONE, U",
+                  "YOURE": "YOU, YOU'RE, UR, NEXT, UH UH, YOU ARE, U, YOUR, WHAT?, UH HUH, SURE, DONE, LIKE, HOLD",
+                  "YOUR": "UH UH, YOU ARE, UH HUH, YOUR, NEXT, UR, SURE, U, YOU'RE, YOU, WHAT?, HOLD, LIKE, DONE"}
+
+    while True:
+        position = position_dict[int(label_dict[input("Enter given word ").lower()])]
+        print(position)
+        order = order_dict[input("Enter word: ").upper()]
+        print(order)
+
+
 def main():
     vowels = ['a', 'e', 'i', 'o', 'u']
 
@@ -52,17 +97,13 @@ def main():
     has_vowels = any([letter.lower() in vowels for letter in serial_num])
     is_odd = bool(int(serial_num[-1]) % 2)
     num_batteries = int(input("Number of batteries? "))
-    parallel_port = True if input("Has parallel port? ").lower() in ["yes", "y"] else False
+    has_parallel = True if input("Has parallel port? ").lower() in ["yes", "y"] else False
     print()
 
-
-
-    complicated_wires()
+    complicated_wires(is_odd, has_parallel, num_batteries)
     # while True:
     #     passwords()
 
 
 if __name__ == "__main__":
     main()
-
-

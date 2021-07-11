@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acf833c-c8ff-4f6c-8cb1-e0caf99c9383" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/words_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Specializations - Sheet6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/complicated_wires_cheatsheet.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keep_cheating_and_nobody_explodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/keep_cheating_and_nobody_explodes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/words_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
