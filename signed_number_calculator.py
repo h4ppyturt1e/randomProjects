@@ -3,21 +3,25 @@ from base_converter import num_to_dec as to_dec
 
 
 def binary_addition():
-    num1 = input("Enter first binary number")
-    num2 = input("Enter second binary number")
+    num1 = input("Enter first binary number: ")
+    num2 = input("Enter second binary number: ")
     bits = len(num1)
     largest_bit = 2 ** (bits-1)
-    if num1[0] == "1":
-        num1 = to_dec(num1[1:], 2) - largest_bit
-    else:
-        num1 = to_dec(num1[1:], 2)
-    if num2[0] == "1":
-        num2 = to_dec(num2[1:], 2) - largest_bit
-    else:
-        num2 = to_dec(num2[1:], 2)
+    try:
+        if num1[0] == "1":
+            num1 = to_dec(num1[1:], 2) - largest_bit
+        else:
+            num1 = to_dec(num1[1:], 2)
+        if num2[0] == "1":
+            num2 = to_dec(num2[1:], 2) - largest_bit
+        else:
+            num2 = to_dec(num2[1:], 2)
+    except IndexError:
+        print("Invalid input, try again.\n")
+        binary_addition()
     total = num1 + num2
     print(num1, num2, total)
-    if total >= largest_bit:
+    if int(total) >= largest_bit:
         print(total, "is greater than", largest_bit, ", Incorrect sum.")
     else:
         new_total = convert_base(str(abs(total)), 10, 2)
@@ -37,9 +41,7 @@ def binary_addition():
         print("Answer:", total_cache)
 
 
-def main():
+if __name__ == "__main__":
+    print()
     while True:
         binary_addition()
-
-
-main()
