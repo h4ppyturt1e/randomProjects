@@ -8,9 +8,10 @@ letter_to_num = {'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15, 'G': 16, 
 # print("Base converter by h4ppyturt1e\n")
 
 def convert_to_base_n():
-    ''' Converts num in cur_base to base_n
+    """
+    Converts num in cur_base to base_n
     Precondition: 0 < n <= 36
-    '''
+    """
     keep_going = True
     try:
         while keep_going:
@@ -45,13 +46,10 @@ def convert_to_base_n():
 
 
 def num_to_dec(num: str, cur_base: int) -> int:
-    ''' Converts num in cur_base to decimal(base 10)
+    """ 
+    Converts num in cur_base to decimal(base 10)
     Precondition: 0 < cur_base < (every digit in num)
-    >>> num_to_dec('35', 7)
-    26
-    >>> num_to_dec('A3F', 16)
-    2623
-    '''
+    """
     num_length = len(num)
     total = 0
     power = 0
@@ -68,9 +66,10 @@ def num_to_dec(num: str, cur_base: int) -> int:
 
 
 def manual_convert_to_base_n(num: str, cur_base: int, base_n: int):
-    ''' Converts num in cur_base to base_n
+    """ 
+    Converts num in cur_base to base_n
     Precondition: 0 < n <= 36
-    '''
+    """
     num = num.upper()
     still_divisible = True
     lodigits = []
@@ -93,4 +92,5 @@ def manual_convert_to_base_n(num: str, cur_base: int, base_n: int):
 
 
 if __name__ == '__main__':
+    print()
     convert_to_base_n()
