@@ -35,8 +35,12 @@ def main():
     op = input("Enter operator: ")
     
     if op not in valid_ops:
-        print("Invalid operator. Please try again")
+        print("Invalid operator. Please try again.")
         main()
+    if len(num1) != len(num2):
+        print("Numbers have differing lengths. Please try again.")
+        main()
+    
     else:
         if op == "and":
             result = bitwise_and(num1, num2)
