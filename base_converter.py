@@ -92,4 +92,5 @@ def manual_convert_to_base_n(num: str, cur_base: int, base_n: int):
     return num_in_base_n
 
 
-convert_to_base_n()
+if __name__ == '__main__':
+    convert_to_base_n()
