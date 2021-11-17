@@ -1,0 +1,41 @@
+==GROCERIES==
+ponzu sauce, 4.29
+nestle milo, 10.98
+loacker blueberry yogurt, 5.19
+premium oyster sauce, 5.99
+abon pork floss, 13.99
+spicy fried dough twist, 5.58
+japan slippers, 7.88
+totole mushroom bouillon, 6.99
+lays cucumber chips, 4.79
+haidilao broth flavor hot pot SHARED, 5.30
+haidilao broth flavor hot pot JESLIN, 5.30
+la mo wang spicy fried tofu, 6.49
+orion turtle chips, 9.99
+gf ultra wing medium 24cm, 8.99
+esthe dual derm spot patch, 8.29
+gd mala hotpot mix snack, 10.99
+
+==MEAT==
+beef naval plate sliced roll, 14.78
+
+==SEAFOOD==
+fish ball w/fish egg-urchin, 4.83
+fz assorted fishball, 6.99
+cooked shrimp meat, 13.98
+
+==PRODUCE==
+korean enoki mushroom, 1.49
+green onions, 1.98
+limes, 2.07
+shiitake mushrooms, 6.27
+golden kiwis, 7.88
+
+==DELI==
+superior sesame soya, 4.99
+samlip frozen noodles, 4.19
+
+==EXTRAS==
+t&t shopping bag, 0.12
+gst, 2.71
+pst, 1.14

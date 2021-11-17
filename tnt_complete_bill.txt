@@ -1,0 +1,46 @@
+T&T BILL - PAY TO JESLIN!
+
+Shared bill:
+"haidilao broth flavor hot pot SHARED": $5.3
+"beef naval plate sliced roll": $14.78
+"fish ball w/fish egg-urchin": $4.83
+"fz assorted fishball": $6.99
+"korean enoki mushroom": $1.49
+"green onions": $1.98
+"limes": $2.07
+"shiitake mushrooms": $6.27
+"t&t shopping bag": $0.12
+"gst": $2.71
+"pst": $1.14
+*Total: $47.67999999999999 / 4 = $11.919999999999998*
+
+Jeslin's bill:
+"nestle milo": $10.98
+"spicy fried dough twist": $5.58
+"totole mushroom bouillon": $6.99
+"haidilao broth flavor hot pot JESLIN": $5.3
+"la mo wang spicy fried tofu": $6.49
+"gd mala hotpot mix snack": $10.99
+"cooked shrimp meat": $13.98
+"samlip frozen noodles": $4.19
+*Total: $64.5 + $11.919999999999998 = $76.42*
+
+Lavina's bill:
+"ponzu sauce": $4.29
+"loacker blueberry yogurt": $5.19
+"premium oyster sauce": $5.99
+"abon pork floss": $13.99
+"japan slippers": $7.88
+"lays cucumber chips": $4.79
+"gf ultra wing medium 24cm": $8.99
+"esthe dual derm spot patch": $8.29
+"golden kiwis": $7.88
+"superior sesame soya": $4.99
+*Total: $72.28 + $11.919999999999998 = $84.2*
+
+Ryan's bill:
+"orion turtle chips": $9.99
+*Total: $9.99 + $11.919999999999998 = $21.909999999999997*
+
+Valery's bill:
+*Total: $0 + $11.919999999999998 = $11.919999999999998*
