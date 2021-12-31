@@ -5,3 +5,4 @@
 __pycache__/test.cpython-39.pyc
 test.py
 test.txt
+*.pdf
