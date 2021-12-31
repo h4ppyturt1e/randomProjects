@@ -1,8 +1,7 @@
 
 *.xml
-.idea/.name
-.idea/workspace.xml
-__pycache__/test.cpython-39.pyc
+.idea/*
+__pycache__/*
 test.py
 *.txt
 *.pdf
